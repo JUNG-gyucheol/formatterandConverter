@@ -10,10 +10,6 @@ import sun.tools.jconsole.Worker;
 
 @RestController
 public class EventController {
-    @InitBinder
-    public void init(WebDataBinder webDataBinder){
-        webDataBinder.registerCustomEditor(Event.class, new EventEditor() );
-    }
 
     @GetMapping("/event/{event}")
     public String getEvent(@PathVariable Event event){
